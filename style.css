@@ -1,0 +1,1137 @@
+:root {
+    --blue-dark: #174EA6;
+    --blue: #3478D4;
+    --blue-light: #BBD7FA;
+    --blue-pale: #E5F0FF;
+
+    --background: #F4F8FE;
+    --white: #FFFFFF;
+
+    --text: #263746;
+    --muted: #586B80;
+    --border: #D1E1F4;
+
+    --shadow: 0 10px 30px rgba(23, 78, 166, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* 2. HEADER & NAVIGATION */
+
+.header {
+    width: 100%;
+    min-height: 70px;
+    padding: 12px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: var(--blue-dark);
+    font-size: 21px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 9px 21px;
+}
+
+.navbar a {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    transition: color 0.25s ease;
+}
+
+.navbar a:hover {
+    color: var(--blue);
+}
+
+
+/* 3. GENERAL SECTION */
+
+.section {
+    width: 100%;
+    padding: 78px 5%;
+    scroll-margin-top: 75px;
+}
+
+.section-heading {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: var(--blue-dark);
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.section-heading h2 span {
+    color: var(--blue);
+}
+
+.section-subtitle {
+    max-width: 660px;
+    margin: 10px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* 4. HOME / HERO */
+
+.hero {
+    min-height: 600px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
+
+    align-items: center;
+    gap: 45px;
+
+    background: linear-gradient(
+        115deg,
+        #F4F8FE 25%,
+        #DCEAFF 100%
+    );
+}
+
+
+/* FOTO PROFIL BULAT */
+
+.hero-photo-area {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    min-height: 390px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-photo-wrap {
+    position: relative;
+    z-index: 2;
+
+    width: 290px;
+    height: 290px;
+    padding: 8px;
+
+    background: var(--white);
+    border: 4px solid var(--blue);
+    border-radius: 50%;
+
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+}
+
+
+/* ORNAMEN LINGKARAN FOTO */
+
+.photo-decoration {
+    position: absolute;
+    z-index: 1;
+
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.decoration-one {
+    width: 320px;
+    height: 320px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 2px solid var(--blue-light);
+}
+
+.decoration-two {
+    width: 355px;
+    height: 355px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px dashed var(--blue);
+    opacity: 0.6;
+}
+
+
+/* HOME CONTENT */
+
+.hero-content {
+    width: 100%;
+    max-width: 680px;
+}
+
+.hero-greeting {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+.hero-content h1 {
+    color: var(--blue-dark);
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.hero-content h1 span {
+    color: var(--blue);
+}
+
+.hero-content h2 {
+    color: var(--blue);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+/* SKILL TAGS HOME */
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.hero-tags span {
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    background: var(--blue-pale);
+    border: 1px solid var(--blue-light);
+
+    color: var(--blue-dark);
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hero-tags span:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+
+/* 5. ABOUT */
+
+.about-section {
+    background: var(--white);
+}
+
+.about-card {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+    padding: 38px 45px;
+
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+.about-card p {
+    max-width: 860px;
+
+    margin: 0 auto 18px;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 2;
+
+    text-align: center;
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* 6. SKILLS */
+
+.skills-section {
+    background: var(--background);
+}
+
+.skills-grid {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.skill-card {
+    grid-column: span 2;
+
+    min-width: 0;
+    height: 100%;
+
+    padding: 27px 20px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 18px rgba(23, 78, 166, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Laptop: 3 kartu atas, 2 kartu bawah */
+
+.skill-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.skill-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--blue-light);
+}
+
+
+/* IKON SKILLS */
+
+.skill-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 17px;
+
+    border-radius: 15px;
+
+    background: var(--blue-pale);
+    border: 1px solid var(--blue-light);
+
+    color: var(--blue);
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    background: var(--blue);
+    color: var(--white);
+    transform: scale(1.06);
+}
+
+.skill-card h3 {
+    color: var(--blue-dark);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+/* 7. MY LEARNING JOURNEY */
+
+.journey-section {
+    background: #EAF2FD;
+}
+
+.journey-container {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.journey-card {
+    min-width: 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    padding: 26px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(23, 78, 166, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.journey-number {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: var(--blue-dark);
+    color: var(--white);
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.journey-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.journey-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.journey-content h3 {
+    color: var(--blue-dark);
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.journey-content p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+/* 8. ACHIEVEMENT */
+
+.achievement-section {
+    background: #F0F5FC;
+}
+
+.achievement-grid {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.achievement-card {
+    min-width: 0;
+    height: 100%;
+
+    padding: 29px 25px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(23, 78, 166, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.achievement-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 13px;
+
+    background: var(--blue-pale);
+    color: var(--blue-dark);
+}
+
+.achievement-type {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.achievement-card h3 {
+    color: var(--blue-dark);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.achievement-card p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+/* 9. MY RECENT WORK */
+
+.portfolio-section {
+    background: var(--white);
+}
+
+.portfolio-grid {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.project-card {
+    min-width: 0;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+
+/* FOTO PORTOFOLIO */
+
+.project-image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    background: var(--blue-pale);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+.project-info {
+    height: calc(100% - 190px);
+    padding: 22px 19px;
+    background: var(--white);
+}
+
+.project-type {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.project-info h3 {
+    color: var(--blue-dark);
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 11px;
+}
+
+.project-info p:not(.project-type) {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+
+/* 10. FOOTER */
+
+.footer {
+    width: 100%;
+    padding: 27px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    background: var(--blue-dark);
+    color: var(--white);
+
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer p {
+    color: #E5F0FF;
+    font-size: 12px;
+}
+
+
+/* 11. LAPTOP KECIL */
+
+@media (max-width: 1200px) {
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-photo-wrap {
+        width: 270px;
+        height: 270px;
+    }
+
+    .skills-grid {
+        max-width: 1000px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 900px;
+    }
+}
+
+
+/* 12. TABLET */
+
+@media (max-width: 900px) {
+
+    html {
+        scroll-padding-top: 115px;
+    }
+
+    .header {
+        padding: 12px 4%;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: center;
+        gap: 8px 17px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .section {
+        padding: 65px 4%;
+    }
+
+    .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hero-photo-area {
+        max-width: 350px;
+        min-height: 360px;
+    }
+
+    .hero-photo-wrap {
+        width: 260px;
+        height: 260px;
+    }
+
+    .decoration-one {
+        width: 290px;
+        height: 290px;
+    }
+
+    .decoration-two {
+        width: 320px;
+        height: 320px;
+    }
+
+    .hero-content {
+        max-width: 720px;
+        margin: auto;
+    }
+
+    .hero-tags {
+        justify-content: center;
+    }
+
+
+    /* Skills tablet: 2 kolom */
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 750px;
+    }
+
+    .skill-card,
+    .skill-card:nth-child(4),
+    .skill-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .journey-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .achievement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 850px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 850px;
+    }
+
+    .about-card {
+        max-width: 800px;
+        padding: 32px;
+    }
+}
+
+
+/* 13. HANDPHONE */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 11px 14px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .navbar {
+        gap: 7px 12px;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .section {
+        padding: 52px 18px;
+    }
+
+    .section-heading {
+        margin-bottom: 29px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .section-subtitle {
+        font-size: 13px;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        gap: 22px;
+        padding-top: 42px;
+        padding-bottom: 48px;
+    }
+
+    .hero-photo-area {
+        max-width: 300px;
+        min-height: 290px;
+    }
+
+    .hero-photo-wrap {
+        width: 220px;
+        height: 220px;
+    }
+
+    .decoration-one {
+        width: 250px;
+        height: 250px;
+    }
+
+    .decoration-two {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .hero-tags {
+        justify-content: center;
+        gap: 7px;
+    }
+
+    .hero-tags span {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+
+
+    /* ABOUT */
+
+    .about-card {
+        padding: 23px 18px;
+    }
+
+    .about-card p {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        gap: 14px;
+    }
+
+    .skill-card,
+    .skill-card:nth-child(4),
+    .skill-card:nth-child(5) {
+        grid-column: auto;
+        padding: 23px 20px;
+    }
+
+    .skill-card h3 {
+        font-size: 15px;
+    }
+
+    .skill-card p {
+        font-size: 13px;
+    }
+
+
+    /* JOURNEY */
+
+    .journey-container {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        gap: 14px;
+    }
+
+    .journey-card {
+        padding: 20px;
+        gap: 13px;
+    }
+
+    .journey-number {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 14px;
+    }
+
+    .journey-content h3 {
+        font-size: 15px;
+    }
+
+    .journey-content p {
+        font-size: 13px;
+    }
+
+
+    /* ACHIEVEMENT */
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        gap: 15px;
+    }
+
+    .achievement-card {
+        padding: 23px;
+    }
+
+    .achievement-card h3 {
+        font-size: 16px;
+    }
+
+    .achievement-card p:last-child {
+        font-size: 13px;
+    }
+
+
+    /* PORTFOLIO */
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        gap: 16px;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-info {
+        height: auto;
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        font-size: 16px;
+    }
+
+    .project-info p:not(.project-type) {
+        font-size: 13px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+
+/* 14. HANDPHONE KECIL */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        gap: 6px 9px;
+    }
+
+    .navbar a {
+        font-size: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .hero-photo-wrap {
+        width: 195px;
+        height: 195px;
+    }
+
+    .decoration-one {
+        width: 225px;
+        height: 225px;
+    }
+
+    .decoration-two {
+        width: 250px;
+        height: 250px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .skill-card,
+    .journey-card,
+    .achievement-card,
+    .project-info {
+        padding: 18px;
+    }
+}
+
+
+/* 15. AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}
